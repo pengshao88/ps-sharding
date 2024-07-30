@@ -1,6 +1,6 @@
 package cn.pengshao.sharding.demo;
 
-import cn.pengshao.sharding.ShardingAutoConfiguration;
+import cn.pengshao.sharding.config.ShardingAutoConfiguration;
 import cn.pengshao.sharding.demo.mapper.UserMapper;
 import cn.pengshao.sharding.demo.model.User;
 import cn.pengshao.sharding.mybatis.ShardingMapperFactoryBean;

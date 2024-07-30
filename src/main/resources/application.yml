@@ -11,11 +11,11 @@ spring:
         password: admin_88!
     tables:
       t_user:
-        actualDataNodes: ds0.t_user0, ds0.t_user1, ds0.t_user2, ds1.t_user0, ds1.t_user1, ds1.t_user2
+        actualDataNodes: db0.t_user0, db0.t_user1, db0.t_user2, db1.t_user0, db1.t_user1, db1.t_user2
         databaseStrategy:
           type: hash
           shardingColumn: id
-          algorithmExpression: ds${id % 2}
+          algorithmExpression: db${id % 2}
         tableStrategy:
           type: hash
           shardingColumn: id

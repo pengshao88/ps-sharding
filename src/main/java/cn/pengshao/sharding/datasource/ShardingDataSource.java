@@ -1,7 +1,7 @@
 package cn.pengshao.sharding.datasource;
 
 import cn.pengshao.sharding.engine.ShardingContext;
-import cn.pengshao.sharding.engine.ShardingProperties;
+import cn.pengshao.sharding.config.ShardingProperties;
 import cn.pengshao.sharding.engine.ShardingResult;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import lombok.extern.slf4j.Slf4j;

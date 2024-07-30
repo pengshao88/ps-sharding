@@ -1,7 +1,10 @@
-package cn.pengshao.sharding;
+package cn.pengshao.sharding.config;
 
 import cn.pengshao.sharding.datasource.ShardingDataSource;
-import cn.pengshao.sharding.engine.ShardingProperties;
+import cn.pengshao.sharding.config.ShardingProperties;
+import cn.pengshao.sharding.engine.ShardingEngine;
+import cn.pengshao.sharding.engine.StandardShardingEngine;
+import cn.pengshao.sharding.mybatis.SqlStatementInterceptor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,4 +24,13 @@ public class ShardingAutoConfiguration {
         return new ShardingDataSource(properties);
     }
 
+    @Bean
+    public ShardingEngine shardingEngine(ShardingProperties properties) {
+        return new StandardShardingEngine(properties);
+    }
+
+    @Bean
+    public SqlStatementInterceptor sqlStatementInterceptor() {
+        return new SqlStatementInterceptor();
+    }
 }

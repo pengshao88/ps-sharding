@@ -1,4 +1,4 @@
-package cn.pengshao.sharding.engine;
+package cn.pengshao.sharding.config;
 
 import lombok.Data;
 
